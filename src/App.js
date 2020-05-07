@@ -19,11 +19,6 @@ function App () {
   useEffect(() => {
     if (view === 'map') {
       if (!map) {
-        // geocoder.geocode( {'address' : 'United States'}, function(results, status) {
-        //     if (status == window.google.maps.GeocoderStatus.OK) {
-        //         console.log(results[0].geometry.location.lat(), results[0].geometry.location.lng());
-        //     }
-        // })
         const myOptions = {
           zoom: 3,
           center: new window.google.maps.LatLng(37.09024, -95.712891),
