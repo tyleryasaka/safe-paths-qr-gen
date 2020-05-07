@@ -1,6 +1,8 @@
 # safe-paths-qr-gen
 Web page which encodes location coordinates as a QR code for the COVID SafePaths app
 
+Demo: https://safepaths-qr-6b479.web.app/
+
 ## Development
 
 ### Setup:
@@ -12,5 +14,6 @@ Web page which encodes location coordinates as a QR code for the COVID SafePaths
 ### Run locally
 - `npm start`
 
-### Deploy to firebase
+### Build and deploy to firebase
+- `npm run build`
 - `npm run deploy`
