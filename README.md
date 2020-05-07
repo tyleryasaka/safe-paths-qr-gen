@@ -5,7 +5,7 @@ Demo: https://safepaths-qr-6b479.web.app/
 
 ## Development
 
-### Setup:
+### Setup
 
 - `npm install`
 - `cp .env.example .env`
