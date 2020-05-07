@@ -26,11 +26,11 @@ function App () {
           navigationControl: true,
           mapTypeId: window.google.maps.MapTypeId.ROADMAP
         }
-        const newMap = new window.google.maps.Map(document.getElementById('map_canvas'), myOptions)
+        const newMap = new window.google.maps.Map(document.getElementById('map-canvas'), myOptions)
         setMap(newMap)
       }
       if (map && !autocomplete) {
-        const input = document.getElementById('searchTextField')
+        const input = document.getElementById('search-text-field')
         const newAutocomplete = new window.google.maps.places.Autocomplete(input)
         setAutocomplete(newAutocomplete)
         window.google.maps.event.addListener(newAutocomplete, 'place_changed', function () {
@@ -44,7 +44,7 @@ function App () {
         })
       }
     }
-  })
+  }, [view, map, autocomplete])
 
   return (
     <div className='App'>
@@ -54,14 +54,14 @@ function App () {
           <p>
             Generate a SafePaths QR code for your location.
           </p>
-          <a
+          <span
             className='App-link'
             onClick={() => setView('map')}
             target='_blank'
             rel='noopener noreferrer'
           >
             Begin
-          </a>
+          </span>
         </div>
       )}
       {view === 'map' && (
@@ -69,17 +69,17 @@ function App () {
           <p>
             Enter the address where this QR code will be displayed:
           </p>
-          <input id='searchTextField' type='text' size='50' />
-          <div id='map_canvas' style={{ width: '500px', height: '300px' }} />
+          <input id='search-text-field' type='text' size='50' />
+          <div id='map-canvas' />
           {coordinates && (
-            <a
+            <span
               className='App-link'
               onClick={() => setView('pre-qr')}
               target='_blank'
               rel='noopener noreferrer'
             >
               Use this address
-            </a>
+            </span>
           )}
         </div>
       )}
@@ -89,14 +89,14 @@ function App () {
             Click the button below to generate your printable QR code. People may scan this as they enter your location.
           </p>
           {coordinates && (
-            <a
+            <span
               className='App-link'
               onClick={() => setView('qr')}
               target='_blank'
               rel='noopener noreferrer'
             >
               Show QR code
-            </a>
+            </span>
           )}
         </div>
       )}

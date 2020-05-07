@@ -3,7 +3,7 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 20vmin;
   pointer-events: none;
 }
 
@@ -24,4 +24,20 @@
 
 .App-link {
   color: #4051db;
+  margin-top: 20px;
+}
+
+.App-link:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+#map-canvas {
+  width: 500px;
+  height: 300px;
+  border: 4px solid #4051db;
+}
+
+#search-text-field {
+  margin-bottom: 20px;
 }
